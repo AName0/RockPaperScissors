@@ -5,8 +5,8 @@ let lossCounter = 0;
 let drawCounter = 0;
 
 function getPlayerChoice() {
-    let playerChoice = prompt("Rock, Paper or Scissors?")
-    return playerChoice
+    let playerChoice = prompt("Rock, Paper or Scissors?").toLowerCase();
+    return playerChoice;
 }
 
 function getComputerChoice() {
@@ -17,7 +17,7 @@ function getComputerChoice() {
             computerChoice = 'paper';
         } else if (computerChoice === 2) {
             computerChoice = 'scissors';
-        }
+        } 
     return computerChoice;
 }
 
