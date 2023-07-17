@@ -6,6 +6,9 @@ let drawCounter = 0;
 
 function getPlayerChoice() {
     let playerChoice = prompt("Rock, Paper or Scissors?").toLowerCase();
+    if (playerChoice != 'rock' || 'paper' || 'scissors') {
+        alert("Error: Invalid word, Please refresh the page and try again") /* TODO: Find way to terminate program or allow the player to try again */
+    }
     return playerChoice;
 }
 
