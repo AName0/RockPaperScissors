@@ -59,6 +59,13 @@ function game() {
     playRound(getPlayerChoice(), getComputerChoice());
     playRound(getPlayerChoice(), getComputerChoice());
     playRound(getPlayerChoice(), getComputerChoice());
+    if (winCounter === lossCounter) {
+        alert("It's a draw")
+    } else if (winCounter > lossCounter) {
+        alert("You win!")
+    } else {
+        alert("Computer wins!")
+    }
     alert("Wins: " + winCounter + "\nLosses: " + lossCounter + "\nDraws: " + drawCounter);
 }
 
