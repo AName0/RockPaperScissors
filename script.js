@@ -68,3 +68,8 @@ function game() {
 const rock = document.querySelector("#rock");
 rock.addEventListener('click', () => playRound('rock', getComputerChoice())); // reminder: second arg must be a function, not a function call
                                                                               // so wrap it around another function like so.
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () => playRound('paper', getComputerChoice()))
+
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', () => playRound('scissors', getComputerChoice()))
