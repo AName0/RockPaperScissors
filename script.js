@@ -71,8 +71,17 @@ const resultsDisplay = document.createElement('div');
 body.appendChild(resultsDisplay)
 
 const winCounterDisplay = document.createElement('p');
-winCounterDisplay.textContent = `Draws: ${drawCounter}`;
-resultsDisplay.appendChild(winCounterDisplay)
+winCounterDisplay.textContent = `Wins: ${winCounter}`;
+
+const lossCounterDisplay = document.createElement('p');
+lossCounterDisplay.textContent = `Losses: ${lossCounter}`;
+
+const drawCounterDisplay = document.createElement('p');
+drawCounterDisplay.textContent = `Draws: ${drawCounter}`;
+
+resultsDisplay.appendChild(winCounterDisplay);
+resultsDisplay.appendChild(lossCounterDisplay);
+resultsDisplay.appendChild(drawCounterDisplay);
 
 const rock = document.querySelector("#rock");
 rock.addEventListener('click', () => playRound('rock', getComputerChoice())); // reminder: second arg must be a function, not a function call
