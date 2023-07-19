@@ -65,6 +65,15 @@ function game() {
     alert("Wins: " + winCounter + "\nLosses: " + lossCounter + "\nDraws: " + drawCounter);
 }
 
+const body = document.querySelector('body');
+
+const resultsDisplay = document.createElement('div');
+body.appendChild(resultsDisplay)
+
+const winCounterDisplay = document.createElement('p');
+winCounterDisplay.textContent = `Draws: ${drawCounter}`;
+resultsDisplay.appendChild(winCounterDisplay)
+
 const rock = document.querySelector("#rock");
 rock.addEventListener('click', () => playRound('rock', getComputerChoice())); // reminder: second arg must be a function, not a function call
                                                                               // so wrap it around another function like so.
