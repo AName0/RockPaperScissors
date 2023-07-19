@@ -14,13 +14,12 @@ function getPlayerChoice() {
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3);
     if (computerChoice === 0) {
-        computerChoice= 'rock';
+        return 'rock';
         } else if (computerChoice === 1) {
-            computerChoice = 'paper';
+            return'paper';
         } else if (computerChoice === 2) {
-            computerChoice = 'scissors';
+            return 'scissors';
         } 
-    return computerChoice;
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -66,5 +65,6 @@ function game() {
     alert("Wins: " + winCounter + "\nLosses: " + lossCounter + "\nDraws: " + drawCounter);
 }
 
-const rock = document.querySelector("#rock")
-rock.addEventListener('click', getPlayerChoice)
+const rock = document.querySelector("#rock");
+rock.addEventListener('click', () => playRound('rock', getComputerChoice())); // reminder: second arg must be a function, not a function call
+                                                                              // so wrap it around another function like so.
