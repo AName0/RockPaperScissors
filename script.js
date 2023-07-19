@@ -4,13 +4,6 @@ let winCounter = 0;
 let lossCounter = 0;
 let drawCounter = 0;
 
-function getPlayerChoice() {
-    let playerChoice = prompt("Rock, Paper or Scissors?").toLowerCase();
-    if (playerChoice != 'rock' && playerChoice != 'paper' && playerChoice != 'scissors') { /* TODO: Find way to terminate program or allow the player to try again */
-        alert("Error: Invalid input, Please refresh the page and try again"); }
-    return playerChoice;
-}
-
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3);
     if (computerChoice === 0) {
