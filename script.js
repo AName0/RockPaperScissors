@@ -26,31 +26,31 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         alert('It\'s a draw');
         console.log('draw');
-        return drawCounter += 1;
+        drawCounter += 1;
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         alert("You win!, Scissors beats Rock");
         console.log('player wins')
-        return winCounter += 1;
+        winCounter += 1;
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
         alert('You win!, Paper beats Rock');
         console.log('player wins')
-        return winCounter += 1;
+        winCounter += 1;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         alert('You win!, Rock beats Scissors');
         console.log('player wins')
-        return winCounter += 1;
+        winCounter += 1;
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         alert('You lose!, Rock beats Scissors');
         console.log('player loses')
-        return lossCounter += 1;
+        lossCounter += 1;
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         alert('You lose!, Scissors beats Paper');
         console.log('player loses')
-        return lossCounter += 1;
+        lossCounter += 1;
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
         alert('You lose!, Paper beats Rock');
         console.log('player loses')
-        return lossCounter += 1;
+        lossCounter += 1;
     }
 }
 
