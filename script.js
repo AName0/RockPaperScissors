@@ -56,11 +56,6 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    playRound(getPlayerChoice(), getComputerChoice());
-    playRound(getPlayerChoice(), getComputerChoice());
-    playRound(getPlayerChoice(), getComputerChoice());
-    playRound(getPlayerChoice(), getComputerChoice());
-    playRound(getPlayerChoice(), getComputerChoice());
     if (winCounter === lossCounter) {
         alert("It's a draw")
     } else if (winCounter > lossCounter) {
@@ -71,4 +66,5 @@ function game() {
     alert("Wins: " + winCounter + "\nLosses: " + lossCounter + "\nDraws: " + drawCounter);
 }
 
-game();
+const rock = document.querySelector("#rock")
+rock.addEventListener('click', getPlayerChoice)
