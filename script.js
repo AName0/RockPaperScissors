@@ -59,17 +59,15 @@ function playRound(playerSelection, computerSelection) {
         lossCounter += 1;
         lossCounterDisplay.textContent = `Losses: ${lossCounter}`;
     }
+    checkScore();
 }
 
-function game() {
-    if (winCounter === lossCounter) {
-        alert("It's a draw")
-    } else if (winCounter > lossCounter) {
-        alert("You win!")
-    } else {
-        alert("Computer wins!")
+function checkScore() {
+    if (winCounter === 5) {
+        alert("You win!");
+    } else if (lossCounter === 5) {
+        alert("Computer wins!");
     }
-    alert("Wins: " + winCounter + "\nLosses: " + lossCounter + "\nDraws: " + drawCounter);
 }
 
 const body = document.querySelector('body');
