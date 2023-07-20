@@ -57,16 +57,18 @@ function playRound(playerSelection, computerSelection) {
 
 function checkScore() {
     if (playerScore === 5) {
-        alert("You win!");
+        const finalResult = document.createElement('p');
+        finalResult.textContent = 'Player Wins!';
+        container.appendChild(finalResult);
     } else if (computerScore === 5) {
         alert("Computer wins!");
     }
 }
 
-const body = document.querySelector('body');
+const container = document.querySelector('.score-container');
 
 const resultsDisplay = document.createElement('div');
-body.appendChild(resultsDisplay)
+container.appendChild(resultsDisplay)
 
 const playerScoreDisplay = document.createElement('p');
 playerScoreDisplay.textContent = `Player: ${playerScore}`;

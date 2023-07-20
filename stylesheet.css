@@ -1,4 +1,46 @@
-h1 {
+body {         
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    flex-direction: column;     
+    font-family: sans-serif;
+    border: 0;
+    margin: 0;
+}
+
+.header {
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    padding: 16px;
+    background-color: antiquewhite;
+    outline: 1px solid red;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    outline: 1px solid red;
+}
+
+.button {
+    
+}
+
+.score-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    background-color: lightgray;
+    outline: 1px solid blue;
 }
