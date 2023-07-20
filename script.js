@@ -1,7 +1,7 @@
 /* JS script for Rock paper scissors game */
 
-let winCounter = 0;
-let lossCounter = 0;
+let playerScore = 0;
+let computerScore = 0;
 let drawCounter = 0;
 
 function getComputerChoice() {
@@ -24,41 +24,41 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         alert("You win!, Scissors beats Rock");
         console.log('player wins')
-        winCounter += 1;
-        winCounterDisplay.textContent = `Wins: ${winCounter}`;
+        playerScore += 1;
+        playerScoreDisplay.textContent = `Player: ${playerScore}`;
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
         alert('You win!, Paper beats Rock');
         console.log('player wins')
-        winCounter += 1;
-        winCounterDisplay.textContent = `Wins: ${winCounter}`;
+        playerScore += 1;
+        playerScoreDisplay.textContent = `Player: ${playerScore}`;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         alert('You win!, Rock beats Scissors');
         console.log('player wins')
-        winCounter += 1;
-        winCounterDisplay.textContent = `Wins: ${winCounter}`;
+        playerScore += 1;
+        playerScoreDisplay.textContent = `Player: ${playerScore}`;
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         alert('You lose!, Rock beats Scissors');
         console.log('player loses')
-        lossCounter += 1;
-        lossCounterDisplay.textContent = `Losses: ${lossCounter}`;
+        computerScore += 1;
+        computerScoreDisplay.textContent = `Computer: ${computerScore}`;
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         alert('You lose!, Scissors beats Paper');
         console.log('player loses')
-        lossCounter += 1;
-        lossCounterDisplay.textContent = `Losses: ${lossCounter}`;
+        computerScore += 1;
+        computerScoreDisplay.textContent = `Computer: ${computerScore}`;
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
         alert('You lose!, Paper beats Rock');
         console.log('player loses')
-        lossCounter += 1;
-        lossCounterDisplay.textContent = `Losses: ${lossCounter}`;
+        computerScore += 1;
+        computerScoreDisplay.textContent = `Computer: ${computerScore}`;
     }
     checkScore();
 }
 
 function checkScore() {
-    if (winCounter === 5) {
+    if (playerScore === 5) {
         alert("You win!");
-    } else if (lossCounter === 5) {
+    } else if (computerScore === 5) {
         alert("Computer wins!");
     }
 }
@@ -68,17 +68,17 @@ const body = document.querySelector('body');
 const resultsDisplay = document.createElement('div');
 body.appendChild(resultsDisplay)
 
-const winCounterDisplay = document.createElement('p');
-winCounterDisplay.textContent = `Wins: ${winCounter}`;
+const playerScoreDisplay = document.createElement('p');
+playerScoreDisplay.textContent = `Player: ${playerScore}`;
 
-const lossCounterDisplay = document.createElement('p');
-lossCounterDisplay.textContent = `Losses: ${lossCounter}`;
+const computerScoreDisplay = document.createElement('p');
+computerScoreDisplay.textContent = `Computer: ${computerScore}`;
 
 const drawCounterDisplay = document.createElement('p');
 drawCounterDisplay.textContent = `Draws: ${drawCounter}`;
 
-resultsDisplay.appendChild(winCounterDisplay);
-resultsDisplay.appendChild(lossCounterDisplay);
+resultsDisplay.appendChild(playerScoreDisplay);
+resultsDisplay.appendChild(computerScoreDisplay);
 resultsDisplay.appendChild(drawCounterDisplay);
 
 const rock = document.querySelector("#rock");
