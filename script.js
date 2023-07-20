@@ -61,7 +61,9 @@ function checkScore() {
         finalResult.textContent = 'Player Wins!';
         container.appendChild(finalResult);
     } else if (computerScore === 5) {
-        alert("Computer wins!");
+        const finalResult = document.createElement('p');
+        finalResult.textContent = 'Computer Wins!';
+        container.appendChild(finalResult);
     }
 }
 
