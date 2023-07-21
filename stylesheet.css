@@ -3,7 +3,7 @@ body {
     height: 100vh;
     justify-content: space-between;
     flex-direction: column;
-    background-color: whitesmoke;
+    background-color: rgba(104, 92, 92, 0.123);
     font-family: sans-serif;
     border: 0;
     margin: 0;
@@ -16,15 +16,22 @@ body {
     font-size: 32px;
     font-weight: 900;
     padding: 16px;
-    outline: 1px solid red;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 32px;
-    outline: 1px solid red;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 16px;
+    background-color: lightgray;
+    gap: 16px;
 }
 
 .button {
@@ -33,6 +40,13 @@ body {
 
 .button:hover {
     box-shadow: 5px 5px black;
+}
+
+.objective-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
 }
 
 .score-container {
@@ -47,5 +61,4 @@ body {
     justify-content: center;
     padding: 16px;
     background-color: lightgray;
-    outline: 1px solid blue;
 }
