@@ -10,7 +10,7 @@ function getComputerChoice() {
     if (computerChoice === 0) {
         return "Rock";
         } else if (computerChoice === 1) {
-            return"Paper";
+            return "Paper";
         } else if (computerChoice === 2) {
             return "Scissors";
         } 
@@ -47,7 +47,7 @@ function playRound(playerSelection, computerSelection) {
         computerScoreDisplay.textContent = `Computer: ${computerScore}`;
         computerChoice.textContent = `The Computer chose ${computerSelection}`;
         roundOutcome.textContent = "You lose, Scissors beats Paper";
-    } else if (playerSelection === "Rock' && computerSelection === 'Paper") {
+    } else if (playerSelection === "Rock" && computerSelection === "Paper") {
         computerScore += 1;
         computerScoreDisplay.textContent = `Computer: ${computerScore}`;
         computerChoice.textContent = `The Computer chose ${computerSelection}`;
