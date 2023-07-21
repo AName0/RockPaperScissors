@@ -13,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 32px;
+    font-weight: 900;
     padding: 16px;
     background-color: antiquewhite;
     outline: 1px solid red;
@@ -26,8 +27,8 @@ body {
     outline: 1px solid red;
 }
 
-.button {
-    
+.button:hover {
+    box-shadow: 5px 5px black;
 }
 
 .score-container {
