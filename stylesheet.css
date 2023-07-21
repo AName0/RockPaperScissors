@@ -2,7 +2,8 @@ body {
     display: flex;
     height: 100vh;
     justify-content: space-between;
-    flex-direction: column;     
+    flex-direction: column;
+    background-color: whitesmoke;
     font-family: sans-serif;
     border: 0;
     margin: 0;
@@ -15,7 +16,6 @@ body {
     font-size: 32px;
     font-weight: 900;
     padding: 16px;
-    background-color: antiquewhite;
     outline: 1px solid red;
 }
 
@@ -25,6 +25,10 @@ body {
     align-items: center;
     gap: 32px;
     outline: 1px solid red;
+}
+
+.button {
+    border-top: 5px solid grey;
 }
 
 .button:hover {
