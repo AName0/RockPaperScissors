@@ -35,6 +35,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         computerScore += 1;
         computerScoreDisplay.textContent = `Computer: ${computerScore}`;
+    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
         computerScore += 1;
         computerScoreDisplay.textContent = `Computer: ${computerScore}`;
     }
@@ -45,15 +46,13 @@ function endGame() {
     document.getElementById('rock').disabled = true;
     document.getElementById('paper').disabled = true;
     document.getElementById('scissors').disabled = true;
+    showRestartButton();
 }
 
 function restartGame() {
-    playerScore = 0;
-    computerScore = 0;
-    drawCounter = 0;
-    playerScoreDisplay.textContent = `Player: ${playerScore}`;
-    computerScoreDisplay.textContent = `Computer: ${computerScore}`;
-    drawCounterDisplay.textContent = `Draws: ${drawCounter}`;
+    resetScores();
+    resetScoresText();
+    hideRestartButton();
 }
 
 function checkScore() {
@@ -68,6 +67,18 @@ function checkScore() {
         container.appendChild(finalResult);
         endGame();
     }
+}
+
+function resetScores() {
+    playerScore = 0;
+    computerScore = 0;
+    drawCounter = 0;
+}
+
+function resetScoresText() {
+    playerScoreDisplay.textContent = `Player: ${playerScore}`;
+    computerScoreDisplay.textContent = `Computer: ${computerScore}`;
+    drawCounterDisplay.textContent = `Draws: ${drawCounter}`;
 }
 
 function hideRestartButton() {
