@@ -40,6 +40,12 @@ function playRound(playerSelection, computerSelection) {
     checkScore();
 }
 
+function endGame() {
+    document.getElementById('rock').disabled = true;
+    document.getElementById('paper').disabled = true;
+    document.getElementById('scissors').disabled = true;
+}
+
 function restartGame() {
     playerScore = 0;
     computerScore = 0;
@@ -53,11 +59,13 @@ function checkScore() {
     if (playerScore === 5) {
         const finalResult = document.createElement('p');
         finalResult.textContent = 'Player Wins!';
-        container.appendChild(finalResult); //TODO: prevent player from clicking rps buttons so only oen restart button can appear //TODO: allow restart button to be removed when pressed and also update text on screen.
+        container.appendChild(finalResult);
+        endGame();
     } else if (computerScore === 5) {
         const finalResult = document.createElement('p');
         finalResult.textContent = 'Computer Wins!';
         container.appendChild(finalResult);
+        endGame();
     }
 }
 
