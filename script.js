@@ -17,31 +17,23 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        alert('It\'s a draw');
         drawCounter += 1;
         drawCounterDisplay.textContent = `Draws: ${drawCounter}`;
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        alert("You win!, Scissors beats Rock");
         playerScore += 1;
         playerScoreDisplay.textContent = `Player: ${playerScore}`;
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        alert('You win!, Paper beats Rock');
         playerScore += 1;
         playerScoreDisplay.textContent = `Player: ${playerScore}`;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        alert('You win!, Rock beats Scissors');
         playerScore += 1;
         playerScoreDisplay.textContent = `Player: ${playerScore}`;
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        alert('You lose!, Rock beats Scissors');
         computerScore += 1;
         computerScoreDisplay.textContent = `Computer: ${computerScore}`;
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        alert('You lose!, Scissors beats Paper');
         computerScore += 1;
         computerScoreDisplay.textContent = `Computer: ${computerScore}`;
-    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-        alert('You lose!, Paper beats Rock');
         computerScore += 1;
         computerScoreDisplay.textContent = `Computer: ${computerScore}`;
     }
@@ -61,11 +53,7 @@ function checkScore() {
     if (playerScore === 5) {
         const finalResult = document.createElement('p');
         finalResult.textContent = 'Player Wins!';
-        container.appendChild(finalResult);
-        const restartButton = document.createElement('button'); //TODO: prevent player from clicking rps buttons so only oen restart button can appear
-        restartButton.textContent = 'Restart';                  //TODO: allow restart button to be removed when pressed and also update text on screen.
-        restartButton.addEventListener('click', () => restartGame())
-        container.appendChild(restartButton);
+        container.appendChild(finalResult); //TODO: prevent player from clicking rps buttons so only oen restart button can appear //TODO: allow restart button to be removed when pressed and also update text on screen.
     } else if (computerScore === 5) {
         const finalResult = document.createElement('p');
         finalResult.textContent = 'Computer Wins!';
