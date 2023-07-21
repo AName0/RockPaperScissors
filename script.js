@@ -3,6 +3,7 @@
 let playerScore = 0;
 let computerScore = 0;
 let drawCounter = 0;
+hideRestartButton();
 
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3);
@@ -67,6 +68,16 @@ function checkScore() {
         container.appendChild(finalResult);
         endGame();
     }
+}
+
+function hideRestartButton() {
+    document.getElementById("restart").hidden = true;
+    document.getElementById("restart").disabled = true;
+}
+
+function showRestartButton() {
+    document.getElementById("restart").hidden = false;
+    document.getElementById("restart").disabled = false;
 }
 
 const container = document.querySelector('.score-container');
