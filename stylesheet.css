@@ -56,6 +56,12 @@ body {
     align-items: center;
 }
 
+.restart-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer {
     display: flex;
     justify-content: center;
