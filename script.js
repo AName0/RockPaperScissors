@@ -52,6 +52,7 @@ function restartGame() {
     resetScoresText();
     hideRestartButton();
     enableGameButtons();
+    container.removeChild(container.lastElementChild);
 }
 
 function checkScore() {
