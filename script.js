@@ -43,9 +43,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function endGame() {
-    document.getElementById('rock').disabled = true;
-    document.getElementById('paper').disabled = true;
-    document.getElementById('scissors').disabled = true;
+    disableGameButtons();
     showRestartButton();
 }
 
@@ -53,6 +51,7 @@ function restartGame() {
     resetScores();
     resetScoresText();
     hideRestartButton();
+    enableGameButtons();
 }
 
 function checkScore() {
@@ -91,6 +90,18 @@ function showRestartButton() {
     document.getElementById("restart").disabled = false;
 }
 
+function disableGameButtons() {
+    document.getElementById('rock').disabled = true;
+    document.getElementById('paper').disabled = true;
+    document.getElementById('scissors').disabled = true;
+}
+
+function enableGameButtons() {
+    document.getElementById('rock').disabled = false;
+    document.getElementById('paper').disabled = false;
+    document.getElementById('scissors').disabled = false;
+}
+
 const container = document.querySelector('.score-container');
 
 const resultsDisplay = document.createElement('div');
@@ -117,3 +128,6 @@ paper.addEventListener('click', () => playRound('paper', getComputerChoice()))
 
 const scissors = document.querySelector('#scissors');
 scissors.addEventListener('click', () => playRound('scissors', getComputerChoice()))
+
+const restart = document.querySelector("#restart");
+restart.addEventListener('click', () => restartGame())
