@@ -24,6 +24,13 @@ body {
     align-items: center;
 }
 
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .buttons {
     display: flex;
     justify-content: center;
